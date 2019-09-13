@@ -33,7 +33,7 @@ function updateOne() {
 // selectAll();
 
 module.exports.ORM = {
-    updateOne: updateOne(),
-    selectAll: selectAll(),
-    insertOne: insertOne()
+    updateOne: updateOne,
+    selectAll: selectAll,
+    insertOne: insertOne
 }

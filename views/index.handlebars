@@ -1,9 +1,28 @@
-<ul>
-    {{#each burgers}}
-        <li>
-            <p>{{id}}</p>
-            <p>{{burger_name}}</p>
-        </li>
-    {{/each}}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            {{!-- List of burgers --}}
+            {{#each burgers}}
+            <li>
+                <p>{{id}}</p>
+                <p>{{burger_name}}</p>
+            </li>
+            {{/each}}
+        </div>
 
-</ul>
+
+        <div class="col-6">
+            {{!-- Form --}}
+            <form>
+                <div class="form-group">
+                    <label for="burgerInput">Burger Name</label>
+                    <input type="text" class="form-control" id="burgerInput" aria-describedby="burgerInput"
+                        placeholder="Cheezus Burger">
+                    <small id="emailHelp" class="form-text text-muted">Give a name to your burger</small>
+                </div>
+               {{!-- Submit Burger button --}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
