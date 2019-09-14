@@ -1,14 +1,14 @@
 var orm = require('../config/orm');
 
-function filterDevoured(data) {
-    let filtered = [];
-    for (let i = 0; i < data.length; i++) {
-        if (!data[i].devoured) {
-            filtered.push(data[i]);
-        }
-    }
-    return filtered;
-}
+// function filterDevoured(data) {
+//     let filtered = [];
+//     for (let i = 0; i < data.length; i++) {
+//         if (!data[i].devoured) {
+//             filtered.push(data[i]);
+//         }
+//     }
+//     return filtered;
+// }
 
 burger = {
     create: function (burger_name) {
@@ -32,8 +32,6 @@ burger = {
     select: function () {
         return new Promise(function (resolve, reject) {
         orm.selectAll('burgers').then(function(res){
-            // Filter out the devoured burgers to show only undevoured
-            res = filterDevoured(res);
             resolve(res);
         }).catch(function(err){
             reject(err);

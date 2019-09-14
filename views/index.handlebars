@@ -1,17 +1,28 @@
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             {{!-- List of burgers --}}
-            {{#each burgers}}
-            <li>
-                <p>{{id}}</p>
-                <p>{{burger_name}}</p>
-            </li>
-            {{/each}}
+            <h1>Eat any of the burgers below</h1>
+            {{!-- List of burgers that have not been devoured --}}
+            <ul>
+                {{#each burgers}}
+                {{!-- Unless not yet devoured --}}
+                {{#unless devoured}}
+                {{!-- Create a list of burgers --}}
+                <li>
+                    {{burger_name}}
+                    <button class="burger" data-id="{{id}}" data-devoured="{{devoured}}">
+                        {{#unless devoured}}DEVOUR!{{else}}Throw Up!{{/unless}}
+                    </button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+
+
         </div>
 
-
-        <div class="col-6">
+        <div class="col-4">
             {{!-- Form --}}
             <form>
                 <div class="form-group">
@@ -20,9 +31,27 @@
                         placeholder="Cheezus Burger">
                     <small id="emailHelp" class="form-text text-muted">Give a name to your burger</small>
                 </div>
-               {{!-- Submit Burger button --}}
+                {{!-- Submit Burger button --}}
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+        </div>
+
+        {{!-- Devoured column --}}
+        <div class="col-4">
+            {{!-- List of burgers --}}
+            <h1>Devoured Burgers</h1>
+            {{!-- List of burgers that have been devoured --}}
+            <ul>
+                {{#each burgers}}
+                {{!-- if devoured --}}
+                {{#if devoured}}
+                {{!-- Create a list of burgers that have been eaten--}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
         </div>
     </div>
 </div>
