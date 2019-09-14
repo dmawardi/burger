@@ -1,15 +1,5 @@
 var orm = require('../config/orm');
 
-// function filterDevoured(data) {
-//     let filtered = [];
-//     for (let i = 0; i < data.length; i++) {
-//         if (!data[i].devoured) {
-//             filtered.push(data[i]);
-//         }
-//     }
-//     return filtered;
-// }
-
 burger = {
     create: function (burger_name) {
         return new Promise(function (resolve, reject) {

@@ -11,7 +11,7 @@
                 {{!-- Create a list of burgers --}}
                 <li>
                     {{burger_name}}
-                    <button class="burger" data-id="{{id}}" data-devoured="{{devoured}}">
+                    <button class="burgerDelete" data-id="{{id}}" data-devoured="{{devoured}}">
                         {{#unless devoured}}DEVOUR!{{else}}Throw Up!{{/unless}}
                     </button>
                 </li>

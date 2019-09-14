@@ -14,13 +14,29 @@ router.get('/', function(req, res){
 // Create new burger
 router.post('/api/burgers', function(req, res){
     let newBurger = req.body.burger_name;
-    burger.create(newBurger);
+    burger.create(newBurger).then(function(){
+        // Send to user 200 (OK) status that operation completed
+        res.sendStatus(200);
+
+    }).catch(function(err){
+        // Alert the user the request has failed
+        res.sendStatus(500);
+    });
 });
 
 // Update burger as devoured
 router.put('/api/burgers/:id', function(req, res){
+    // Grab parameter id from URL
     var idToDevour = req.params.id;
-    burger.devour(idToDevour);
+    // Devour burger using id
+    burger.devour(idToDevour).then(function(){
+        // Send to user 200 (OK) status that operation completed
+        res.sendStatus(200);
+
+    }).catch(function(err){
+        // Alert the user the request has failed
+        res.sendStatus(500);
+    });;
 });
 
 

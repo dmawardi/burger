@@ -3,6 +3,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller");
+var path = require('path');
 
 // Init express server and port
 var app = express();
@@ -16,8 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve static content for the app from public directory
-app.use(express.static("public"));
-
+app.use(express.static(path.join(__dirname, "public")));
 
 // Use imported routes for server
 app.use(routes);
