@@ -1,8 +1,10 @@
+// Import packages
 var sql = require('mysql');
+// Password reference ###
 var pass = require('./pw');
 
 
-
+// Build connection to local SQL database
 var connection = sql.createConnection({
     host     : 'localhost',
     user     : 'root',
@@ -10,4 +12,5 @@ var connection = sql.createConnection({
     database : 'burgers_db'
   });
 
-  module.exports = connection;
+// Export
+module.exports = connection;
