@@ -1,7 +1,5 @@
 // Import packages
 var sql = require('mysql');
-// Password reference ###
-var pass = require('./pw');
 
 // If JAWS DB detected, connecto to it
 if (process.env.JAWSDB_URL) {
@@ -12,7 +10,7 @@ if (process.env.JAWSDB_URL) {
   var connection = sql.createConnection({
       host     : 'localhost',
       user     : 'root',
-      password : pass,
+      password : 'HackAway!',
       database : 'burgers_db'
     });
 
