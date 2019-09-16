@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-5">
             {{!-- List of burgers --}}
-            <h1>Eat any of the burgers below</h1>
+            <h1 class="columnHeader">Eat any of the burgers below</h1>
             {{!-- List of burgers that have not been devoured --}}
             <ul>
                 {{#each burgers}}
@@ -10,9 +10,10 @@
                 {{#unless devoured}}
                 {{!-- Create a list of burgers --}}
                 <li>
+                    <img src="assets/img/burger.png" height='50px' width='50px'>
                     {{burger_name}}
                     <button class="burgerDelete" data-id="{{id}}" data-devoured="{{devoured}}">
-                        {{#unless devoured}}DEVOUR!{{else}}Throw Up!{{/unless}}
+                        {{#unless devoured}}DEVOUR IT!{{/unless}}
                     </button>
                 </li>
                 {{/unless}}
@@ -21,8 +22,16 @@
 
 
         </div>
-
+        {{!-- Title card --}}
         <div class="col-4">
+            <div class="card">
+                <img src="assets/img/burger.png" class="card-img-top titleImage" alt="King of Burgers">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to King of Burgers</h5>
+                    <p class="card-text">Submit the Burger Name to save it to our database to be devoured!</p>
+                </div>
+            </div>
+
             {{!-- Form --}}
             <form>
                 <div class="form-group">
@@ -37,9 +46,9 @@
         </div>
 
         {{!-- Devoured column --}}
-        <div class="col-4">
+        <div class="col-3">
             {{!-- List of burgers --}}
-            <h1>Devoured Burgers</h1>
+            <h1 class="columnHeader">Devoured Burgers</h1>
             {{!-- List of burgers that have been devoured --}}
             <ul>
                 {{#each burgers}}

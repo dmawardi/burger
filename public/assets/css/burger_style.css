@@ -1,3 +1,17 @@
 body {
-    background-color: aqua;
+}
+
+/* Title CSS */
+.titleImage {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.columnHeader {
+    margin-top: 100px;
 }
