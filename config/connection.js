@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
   var connection = sql.createConnection({
       host     : 'localhost',
       user     : 'root',
-      password : 'HackAway!',
+      password : 'ricochet505',
       database : 'burgers_db'
     });
 
