@@ -1,6 +1,8 @@
 # Burger
 Monash Web Application Development Bootcamp Week 13: Burger
 
+![Burger Front-End](https://imgur.com/EacveHq)
+
 ### Goal: 
 To build a database of burger names that can be devoured.  The front-end contains a form with the ability to add a burger name. 
 
@@ -36,6 +38,8 @@ NPM packages
 * SQL
 * HTML/CSS
 * Bootstrap
+
+![Burger](https://imgur.com/BMGR8I5)
 
 ## Authors
 
