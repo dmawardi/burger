@@ -1,65 +1,54 @@
-# burger
+# Burger
 Monash Web Application Development Bootcamp Week 13: Burger
 
-# Bamazon
-Web Application Development Bootcamp Week 12: SQL assignment - Bamazon
-
 ### Goal: 
-To build a database accessible by three separate files/interfaces: Supervisor, Manager, and Customer.
+To build a database of burger names that can be devoured.  The front-end contains a form with the ability to add a burger name. 
+
+Every new burger will start undevoured. You can devour a burger by clicking the *Devour It!* button beside it, which will cause the burger name to be added to the *devoured* list on the right
+
+Implementation of database with update and creation features.
 
 ## Installation
 To install, download the files and use npm to install the required packages.
+
+Use the Schema and Seeds files in the db folder to create a MYSQL database.
 
 ```
 npm install
 ```
 
-Then run the individual files using node
+Then amend the connection.js file to connect to the created database in the run server.js using 
 ```
-node customerView.js
-```
-```
-node bamazonManager.js
-```
-```
-node bamazonSupervisor.js
+node server.js
 ```
 
-#### Customer View:
-![alt text](https://media.giphy.com/media/LrLanEM5qwGECFM1Oc/giphy.gif)
-* Make purchases by selecting an item id and quantity
-* This will trigger in a reduction of the stock quantity in the database
-
-#### Manager View View:
-![alt text](https://media.giphy.com/media/IbCpqTAXyS5E9d8G98/giphy.gif)
-* View all products or filter by those with low inventory
-* Able to add to inventory
-* Able to add new item
-
-#### Supervisor View:
-![alt text](https://media.giphy.com/media/YSBF5U6a8TViNgXQpA/giphy.gif)
-* View financials (product sales, overhead costs and total profit) by department
-* Able to add new department
+Proceed to navigate to the http://localhost:8000 in your browser
 
 ### Prerequisites
 NPM packages
 * Mysql
-* inquirer
+* Express
+* Handlebars
 
 ## Built With
 
 * Node JS
 * SQL
+* HTML/CSS
+* Bootstrap
 
 ## Authors
 
-* **Dannar Mawardi** - *Initial work* - [GitHub IO](https://dmawardi.github.io)
+* **Dannar Mawardi** - [GitHub IO](https://dmawardi.github.io)
 
-See also the list of [contributors](https://github.com/dmawardi/Bamazon/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/dmawardi/burger/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Deployed at
+https://powerful-taiga-45422.herokuapp.com/
 
 ## Acknowledgments
 
